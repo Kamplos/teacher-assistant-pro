@@ -2,7 +2,7 @@ import streamlit as st
 from cerebras.cloud.sdk import Cerebras
 # Запуск streamlit run app3.py
 # --- НАСТРОЙКА API ---
-CEREBRAS_API_KEY = "inter_key"
+CEREBRAS_API_KEY = st.secrets["CEREBRAS_API_KEY"]
 client = Cerebras(api_key=CEREBRAS_API_KEY)
 
 st.set_page_config(page_title="Teacher Assistant Pro", page_icon="🎓", layout="wide")
